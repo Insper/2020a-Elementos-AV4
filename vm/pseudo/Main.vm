@@ -1,0 +1,38 @@
+// ---------------------------------  
+// Rafael Corsi @ insper . edu . br
+//              2020a
+// ---------------------------------
+//
+// Descritivo: 
+//  Escreva um código em VM que realize a seguinte
+//  operação :
+//
+//  temp[0] = 0
+//  while(temp[3] >= 0):
+//     temp[0] = temp[0] + temp[2] + 5
+//     temp[3] = temp[3] - 1
+//
+//  Onde:
+//   - temp[0]: temporário 0
+//   - temp[3]: temporário 3....
+// 
+//  ****************************************************
+//  ** A ideia é deixar o Z01 resolver, você não deve **
+//  ** simplificar a equação                          **
+//  ****************************************************
+// ---------------------------------
+
+function Main.main 0
+
+
+
+
+
+
+
+
+
+
+
+label while2
+    goto while2

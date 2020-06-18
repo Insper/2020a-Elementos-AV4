@@ -1,0 +1,22 @@
+// ---------------------------------  
+// Rafael Corsi @ insper . edu . br
+// ---------------------------------
+//
+// Descritivo:
+// 
+//  Escreva uma funcao em VM que o fatorial de um número
+//   esse código main faz a validação do fatorial
+//
+//  ****************************************************
+//  ** A ideia é deixar o Z01 resolver, você não deve **
+//  ** simplificar a equação                          **
+//  ****************************************************
+// ---------------------------------
+
+function Main.main 0
+    push temp 0
+    call factorial 1
+    pop temp 0
+
+label while
+    goto while
