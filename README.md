@@ -19,6 +19,10 @@ Você deve:
 1. editar o arquivo `ALUNO.json`
 1. não esqueça de dar `commit` e `push`
 
+## Teórica
+
+- https://forms.gle/6NVPniqGQaTfYQEm9
+
 ## Prática
 
 :bulb: Antes de começar atualize o Z01-Tools:
@@ -34,12 +38,12 @@ Questões:
 1. [nasm pseudo](https://github.com/Insper/2020a-Elementos-AV4#1--9-sw-nasm-pseudo)
 1. [vm pseudo](https://github.com/Insper/2020a-Elementos-AV4#2--10-sw-vm-pseudo)
 1. [vm fatorial](https://github.com/Insper/2020a-Elementos-AV4#3--11-sw-vm-fatorial)
-1. [vm translator copy](https://github.com/Insper/2020a-Elementos-AV4#4--8-sw-vm-translator-copy)
 1. [vm translator add3](https://github.com/Insper/2020a-Elementos-AV4#5--11-sw-vm-translator-add3)
+1. [vm translator copy](https://github.com/Insper/2020a-Elementos-AV4#4--8-sw-vm-translator-copy)
 
 ----------------------------------
 
-### 1. ( 9 SW) nasm pseudo
+### 1. (0 HW/ 10 SW) nasm pseudo
 
 - Arquivo: `nasm/pseudo.nasm`
 - Teste: `./testeAssembly.py`
@@ -48,7 +52,7 @@ Questões:
 |-------|-----------------|-----|
 | 1     | SW(1..0) = "01" | 3   |
 | 1     | SW(1..0) = "00" | 3   |
-| 1     | SW(1..0) = "10" | 3   |
+| 1     | SW(1..0) = "10" | 4   |
 
 Transcreva para assembly do Z01 o pseudo código a seguir:
 
@@ -63,7 +67,7 @@ Transcreva para assembly do Z01 o pseudo código a seguir:
 
 ----------------------------------
 
-### 2. ( 10 SW) vm pseudo 
+### 2. (0 HW / 10 SW) vm pseudo 
 
 - Arquivo: `vm/pseudo/Main.vm`
 - Teste: `./testeVm.py`
@@ -89,14 +93,14 @@ Onde:
 
 ----------------------------------
 
-### 3. ( 11 SW) vm fatorial
+### 3. (0 HW / 10 SW) vm fatorial
 
 - Arquivo: `vm/factorial/factorial.vm`
 - Teste: `./testeVm.py`
 
 | Teste | O que testa | pts |
 |-------|-------------|-----|
-| 1     | 0!          | 2   |
+| 1     | 0!          | 1   |
 | 2     | 1!          | 2   |
 | 3     | 6!          | 7   |
 
@@ -108,14 +112,51 @@ que já está implementada.
 
 ----------------------------------
 
-### 4. ( 8 SW) vm translator `copy`
+### 4. ( 0 HW / 5 SW) vm translator `add3`
 
 - Arquivo: `vmTranslator/src/main/java/vmtranslator/Code.java`
 - Teste: `./testeVm.py`
 
 | Teste | O que testa | pts |
 |-------|-------------|-----|
-| 1     | 0!          | 8   |
+| 1     | add3        | 5   |
+
+Nossa linguagem vm carece de um comando `add3` que adiciona
+três elementos no topo da pilha (e não 2 como o `add` faz).
+
+```
+       add3 
+  2           10
+  3              <--sp
+  5             
+   <-- sp      
+```
+
+- Nesse exemplo os elementos no topo da pilha são o `5 3 2` após 
+a execução do comando `add3` que soma os três elementos, o resultado
+é guardado no lugar do 2.
+
+A tradução do comando comando `copy` de `.vm` para `nasm` deve ser feito
+no `Code.java` na linha:
+
+``` java
+} else if (command.equals("add3")) {
+
+}
+```
+
+> exemplo: commands.add("leaw $SP, %A");
+
+----------------------------------
+
+### 5. ( 0 HW /  10 SW) vm translator `copy`
+
+- Arquivo: `vmTranslator/src/main/java/vmtranslator/Code.java`
+- Teste: `./testeVm.py`
+
+| Teste | O que testa | pts |
+|-------|-------------|-----|
+| 1     | copy        | 10  |
 
 Nossa linguagem vm carece de um comando `copy` que duplica
 o elemento que está no topo da pilha, como demonstrado no 
@@ -145,39 +186,4 @@ if (command.equals("copy")) {
 
 > exemplo: commands.add("leaw $SP, %A");
 
-----------------------------------
 
-### 5. ( 11 SW) vm translator `add3`
-
-- Arquivo: `vmTranslator/src/main/java/vmtranslator/Code.java`
-- Teste: `./testeVm.py`
-
-| Teste | O que testa | pts |
-|-------|-------------|-----|
-| 1     | 0!          | 8   |
-
-Nossa linguagem vm carece de um comando `add3` que adiciona
-três elementos no topo da pilha (e não 2 como o `add` faz).
-
-```
-       add3 
-  2           10
-  3              <--sp
-  5             
-   <-- sp      
-```
-
-- Nesse exemplo os elementos no topo da pilha são o `5 3 2` após 
-a execução do comando `add3` que soma os três elementos, o resultado
-é guardado no lugar do 2.
-
-A tradução do comando comando `copy` de `.vm` para `nasm` deve ser feito
-no `Code.java` na linha:
-
-``` java
-} else if (command.equals("add3")) {
-
-}
-```
-
-> exemplo: commands.add("leaw $SP, %A");
