@@ -35,11 +35,11 @@ Você deve:
 
 Questões:
 
-1. [nasm pseudo](https://github.com/Insper/2020a-Elementos-AV4#1--9-sw-nasm-pseudo)
-1. [vm pseudo](https://github.com/Insper/2020a-Elementos-AV4#2--10-sw-vm-pseudo)
-1. [vm fatorial](https://github.com/Insper/2020a-Elementos-AV4#3--11-sw-vm-fatorial)
-1. [vm translator add3](https://github.com/Insper/2020a-Elementos-AV4#5--11-sw-vm-translator-add3)
-1. [vm translator copy](https://github.com/Insper/2020a-Elementos-AV4#4--8-sw-vm-translator-copy)
+1. [nasm pseudo](https://github.com/Insper/2020a-Elementos-AV4#1-0-hw-10-sw-nasm-pseudo)
+1. [vm pseudo](https://github.com/Insper/2020a-Elementos-AV4#2-0-hw--10-sw-vm-pseudo)
+1. [vm fatorial](https://github.com/Insper/2020a-Elementos-AV4#3-0-hw--10-sw-vm-fatorial)
+1. [vm translator add3](https://github.com/Insper/2020a-Elementos-AV4#4--0-hw--5-sw-vm-translator-add3)
+1. [vm translator copy](https://github.com/Insper/2020a-Elementos-AV4#5--0-hw--10-sw-vm-translator-copy)
 
 ----------------------------------
 
@@ -149,7 +149,7 @@ no `Code.java` na linha:
 
 ----------------------------------
 
-### 5. ( 0 HW /  10 SW) vm translator `copy`
+### 5. ( 0 HW / 10 SW) vm translator `copy`
 
 - Arquivo: `vmTranslator/src/main/java/vmtranslator/Code.java`
 - Teste: `./testeVm.py`
