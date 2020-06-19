@@ -8,7 +8,7 @@
 Avaliação 4 Elementos de Sistemas - parte prática 
 
 - **Trabalhar sozinho**
-- **120 min** total (prática + teórica)
+- **150 min** total (prática + teórica)
 - Ficar conectado no canal geral (para ouvir instruções)
 
 ### Começando
