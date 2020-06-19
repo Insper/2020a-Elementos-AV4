@@ -78,7 +78,6 @@ Transcreva para assembly do Z01 o pseudo código a seguir:
 
 Transcreva para linguagem VM do Z01 o pseudo código a seguir:
 
-
 ```python
  temp[0] = 0
  while(temp[3] >= 0):     
@@ -105,10 +104,16 @@ Onde:
 | 3     | 6!          | 7   |
 
 Escreva uma função em vm que retorna o fatorial de um 
-número passado como parâmetro.
+número passado como parâmetro (argumento 0).
 
-Essa função pode fazer (e deve) fazer uso da função mult,
-que já está implementada.
+**Essa função pode fazer (e deve) fazer uso da função mult,
+que já está implementada.**
+
+```
+0! = 1
+1! = 1
+6! = 6*5*4*3*2*1
+```
 
 ----------------------------------
 
